@@ -29,12 +29,11 @@ public class PlayerFire : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // 2. 총알을 생성한다.
-                //        firePosition.Length 를 써도된다. 
+                //         firePosition.Length 를 써도된다. 
             {
 
                 GameObject go = Instantiate(bulletPrefab); //복제를 하겠다. 총알
                                                            //GameObject go2 = Instantiate(bulletPrefab); //복제를 하겠다.
-
 
 
                 go.transform.position = firePosition.transform.position;
@@ -46,6 +45,7 @@ public class PlayerFire : MonoBehaviour
 
                 //3-2 플레이어의 위치에서 위로 1.5미터 지점을 지정하는 방법
                 Vector3 firePos = transform.position + new Vector3(0, 1.5f, 0);
+
                 go.transform.position = firePos;
 
            //go2.transform.position = firePosition2.transform.position;
