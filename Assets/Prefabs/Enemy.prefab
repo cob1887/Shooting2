@@ -120,4 +120,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMoveSpeed: 5
   player: {fileID: 0}
-  downRate: 35
+  downRate: 60

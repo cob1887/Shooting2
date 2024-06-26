@@ -39,29 +39,29 @@ public class EnemyMove : MonoBehaviour
         // 확률에 따라 추첨한다. -> 확률 변수, 
 
 
-        // 랜덤한 숫자를 하나 뽑는다.
-        //int myNumber = Random.Range(0, 100);
+        //랜덤한 숫자를 하나 뽑는다.
+        int myNumber = Random.Range(0, 100);
 
-        //// 만일, 뽑은 숫자가 downRate 보다 작으면, 방향을 아래로 설정한다.
-        //if(myNumber < downRate)
-        //{
-        //    dir = Vector3.down;
-        //}
-        //// 그렇지 않다면, 방향을 플레이어 쪽으로 설정한다.
-        //else
-        //{
-        //    dir = player.transform.position - transform.position.normalized;
-        //}
+        // 만일, 뽑은 숫자가 downRate 보다 작으면, 방향을 아래로 설정한다.
+        if (myNumber < downRate)
+        {
+            dir = Vector3.down;
+        }
+        // 그렇지 않다면, 방향을 플레이어 쪽으로 설정한다.
+        else
+        {
+            dir = player.transform.position - transform.position.normalized;
+        }
 
 
 
         //플레이어를 향한 방향으로 이동
-        dir = player.transform.position - transform.position;  //플레이어를 향한 방향
+        //dir = player.transform.position - transform.position;  //플레이어를 향한 방향
         //dir = Vector3.down; 그냥 직선으로만 내려갈때
         
-        dir.Normalize(); //정규화 시켜서 속도를 조정
+        //dir.Normalize(); //정규화 시켜서 속도를 조정
 
-        transform.position += dir * enemyMoveSpeed * Time.deltaTime; // p = p0 * vt
+        //transform.position += dir * enemyMoveSpeed * Time.deltaTime; // p = p0 * vt
 
         
     }
